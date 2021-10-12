@@ -12,4 +12,8 @@ const parse = (formattedValue: string, options: CurrencyInputOptions): number | 
   return new CurrencyFormat(options).parse(formattedValue)
 }
 
-export { useCurrencyInput, parse }
+const currencyFormat = (options: CurrencyInputOptions): CurrencyInputOptions => {
+  return new CurrencyFormat(options)
+}
+
+export { useCurrencyInput, parse, currencyFormat }
